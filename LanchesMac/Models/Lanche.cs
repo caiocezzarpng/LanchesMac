@@ -8,7 +8,7 @@
         public string DescricaoDetalhada { get; set; }
         public decimal Preco { get; set; }
         public string ImagemUrl { get; set; }
-        public string ImagemThmbnailUrl { get; set; }
+        public string ImagemThumbnailUrl { get; set; }
         public bool IsLanchePreferido { get; set; }
         public bool EmEstoque { get; set; }
 
