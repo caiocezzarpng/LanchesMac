@@ -1,4 +1,7 @@
-﻿namespace LanchesMac;
+﻿using LanchesMac.Context;
+using Microsoft.EntityFrameworkCore;
+
+namespace LanchesMac;
 
 public class Startup
 {
@@ -11,7 +14,9 @@ public class Startup
 
     public void ConfigureServices(IServiceCollection services)
     {
-        // Adicionar serviços ao contêiner de injeção de dependência aqui
+        services.AddDbContext<AppDbContext>(options => 
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        
         services.AddControllersWithViews();
     }
 
